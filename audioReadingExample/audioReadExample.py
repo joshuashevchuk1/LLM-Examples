@@ -21,7 +21,7 @@ loading_thread.join()
 
 print("\n✅ =Model Loaded Successfully!")
 
-audio_path = "output.wav"
+audio_path = "Starbucks 6.m4a"
 print("Transcribing audio...")
 transcription = asr_pipeline(audio_path)
 print("🎙️ Transcribed Text:", transcription["text"])
