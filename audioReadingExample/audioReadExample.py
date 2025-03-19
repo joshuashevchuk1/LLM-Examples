@@ -13,7 +13,7 @@ loading_thread = threading.Thread(target=show_loading)
 loading_thread.start()
 
 # Load the Whisper ASR model
-asr_pipeline = pipeline("automatic-speech-recognition", model="openai/whisper-tiny")
+asr_pipeline = pipeline("automatic-speech-recognition", model="openai/whisper-small")
 
 # Stop the loading animation
 model_loaded = True
