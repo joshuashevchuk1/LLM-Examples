@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 # Configuration
 # --------------------------
 # Replace with your actual Google Meet link
-MEETING_URL = "https://meet.google.com/your-meeting-link"
+MEETING_URL = "https://meet.google.com/xms-ydgb-cyx"
 
 # For Linux using PulseAudio capture:
 # Adjust the input device if needed (e.g. a dedicated virtual sink)
