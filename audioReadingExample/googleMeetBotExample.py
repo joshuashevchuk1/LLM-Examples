@@ -14,12 +14,21 @@ MEETING_URL = "https://meet.google.com/your-meeting-link"
 # Adjust the input device if needed (e.g. a dedicated virtual sink)
 FFMPEG_CMD = [
     "ffmpeg",
-    "-f", "pulse",      # Using PulseAudio (Linux)
-    "-i", "default",    # Capture the default PulseAudio source; adjust if needed
-    "-ac", "2",         # Two audio channels
-    "-ar", "44100",     # Audio sample rate
-    "output.wav"        # Output file; you can also pipe or stream this
+    "-f", "avfoundation",      # AVFoundation is the input system for macOS
+    "-i", ":0",                # ":0" selects the default audio input device
+    "-ac", "2",                # Two audio channels
+    "-ar", "44100",            # Audio sample rate
+    "output.wav"               # Output file
 ]
+
+# FFMPEG_CMD = [
+#     "ffmpeg",
+#     "-f", "pulse",      # Using PulseAudio (Linux)
+#     "-i", "default",    # Capture the default PulseAudio source; adjust if needed
+#     "-ac", "2",         # Two audio channels
+#     "-ar", "44100",     # Audio sample rate
+#     "output.wav"        # Output file; you can also pipe or stream this
+# ]
 
 # For Windows using WASAPI, you might use a command like:
 # FFMPEG_CMD = [
@@ -52,7 +61,7 @@ driver.get(MEETING_URL)
 print("Joining Google Meet in headless mode...")
 
 # Wait for the meeting page to load fully
-time.sleep(15)  # Adjust delay as necessary
+time.sleep(5)  # Adjust delay as necessary
 
 # --------------------------
 # Start FFmpeg to Capture Audio
