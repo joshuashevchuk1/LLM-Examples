@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 # Configuration
 # --------------------------
 # Replace with your actual Google Meet link
-MEETING_URL = "https://meet.google.com/xms-ydgb-cyx"
+MEETING_URL = "https://meet.google.com/gse-useg-nta"
 
 # For Linux using PulseAudio capture:
 # Adjust the input device if needed (e.g. a dedicated virtual sink)
@@ -59,9 +59,6 @@ driver = webdriver.Chrome(options=chrome_options)
 # --------------------------
 driver.get(MEETING_URL)
 print("Joining Google Meet in headless mode...")
-
-# Wait for the meeting page to load fully
-time.sleep(5)  # Adjust delay as necessary
 
 # --------------------------
 # Start FFmpeg to Capture Audio
